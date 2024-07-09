@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocietyHub</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script
+      src="https://kit.fontawesome.com/2edfbc5391.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+    
+  <body>
+
+    <div class="page" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+      <div class="navbar">
+        <img src="Images/shlogo.jpg" class="logo" />
+        <h1 style="color: white;font-size:50px;">Kapil Akhila</h1>
+        <nav>
+          <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="#Loginform">Login</a></li>
+            <li><a href="#MAP">Map</a></li>
+            <li><a href="#ami">Amenities</a></li>
+            <li><a href="#rules">Rules</a></li>
+          </ul>
+        </nav>
+        <a href="Adminlogin.php" class="btn">Admin Login</a>
+      </div>
+      
+      <!-- carousel code -->
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/building1.jpg"
+              height="600px"
+              class="d-block w-100"
+              alt="Society"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/building2.jpg"
+              height="600px"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Images/p3.jpeg"
+              height="600px"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- login page -->
+      <div class="loginpage">
+        <div class="row">
+          <div class="col-1">
+            <img src="Images/building1.jpg" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="indicator" />
+              </div>
+              <form action="login.php" method="POST" id="Loginform">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  name="email"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Flat-No."
+                  name="flatno"
+                  required
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <button type="submit" class="btn-losi">Login</button><br />
+                <a href="">Forgot Password...???</a>
+              </form>
+              <form action="register.php" method="POST" id="Regform">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  name="email"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Flat-No."
+                  name="flatno"
+                  required
+                />
+                <input
+                  type="tel"
+                  placeholder="Mobile Number"
+                  name="mobno"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Number of Family members"
+                  name="fammem"
+                  required
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <button type="submit" class="btn-losi">Register Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- map aka location -->
+      <div class="mapx" id="MAP">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.274957448559!2d77.31696382298588!3d19.148468126609693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bec5ed90cb71%3A0x84a1ed309344a9f9!2sKapil%20Akhila%20Co.Operative%20Housing%20Society!5e0!3m2!1sen!2sin!4v1705421091856!5m2!1sen!2sin"
+          style="border: 0"></iframe>
+      </div>
+
+      <!-- amenities -->
+      
+      <div class="flex1" id="ami">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <h2 style="padding-top:60px;">Pool</h2>
+            </div>
+            <div class="flip-box-back">
+              <img src="Images/pool.jpeg " height="200px" width="300px">
+            </div>
+          </div>
+        </div>
+      
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <h2 style="padding-top:60px ;">Garden</h2>
+            </div>
+            <div class="flip-box-back">
+              <img src="Images/garden.jpeg" height="200px" width="300px">
+            </div>
+          </div>
+          </div>
+
+        <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <h2 style="padding-top:60px ;">Club House</h2>
+              </div>
+              <div class="flip-box-back">
+                <img src="Images/club1house.jpeg" height="200px" width="300px">
+              </div>
+            </div>
+            </div>
+        </div>
+
+      <div class="members">
+        <div class="container my-4">
+            <div id="carouselExampleLight" class="carousel carousel-light slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div style="min-height: 190px;">
+                            <div class="carousel-caption d-block">
+                                <h5>MR.DINESH KOTHAWADE</h5>
+                                <p>CHAIRMAN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div style="min-height: 190px;">
+                            <div class="carousel-caption d-block">
+                                <h5>MR. NITIN GHURYE</h5>
+                                <p>SECRETARY</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div style="min-height: 190px;">
+                            <div class="carousel-caption d-block">
+                                <h5>MR.RAJ TEJWANEY</h5>
+                                <p>TREASURER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <div style="min-height: 190px;">
+                          <div class="carousel-caption d-block">
+                              <h5>MR.RAVINDRA MARATHE</h5>
+                              <p>COMMITTEE MEMBER</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <div style="min-height: 190px;">
+                        <div class="carousel-caption d-block">
+                            <h5>MR.ANUP YEOLEKAR</h5>
+                            <p>COMMITTEE MEMBER</p>
+                        </div>
+                    </div>
+                  </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <div style="min-height: 190px;">
+                    <div class="carousel-caption d-block">
+                        <h5>MR.SIDDHARTH GODBOLE</h5>
+                        <p>COMMITTEE MEMBER</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div style="min-height: 190px;">
+                  <div class="carousel-caption d-block">
+                      <h5>MRS. SHOBHA SHENDE</h5>
+                      <p>COMMITTEE MEMBER</p>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div style="min-height: 190px;">
+                  <div class="carousel-caption d-block">
+                      <h5>MRS.MANGALA CHAUDHARI</h5>
+                      <p>COMMITTEE MEMBER</p>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div style="min-height: 190px;">
+                <div class="carousel-caption d-block">
+                    <h5>MR.NIMISH GORAY</h5>
+                    <p>COMMITTEE MEMBER</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div style="min-height: 190px;">
+              <div class="carousel-caption d-block">
+                  <h5>MR.ANNA SAKEGAONKAR</h5>
+                  <p>COMMITTEE MEMBER</p>
+              </div>
+          </div>
+      </div>
+          </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleLight" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleLight" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <div class="container">
+      <footer class="row row-cols-5 py-5 my-5 border-top">
+    
+        <div class="col" >
+          <h5>About</h5>
+          <ul class="nav flex-column" >
+            <li class="nav-item mb-2 ">
+              <a href="#" class="nav-link p-0" style="color: #ffffff;">
+              SocietyHUB is webapp where society members can get all the updates
+              related to their society. The members also get notified with
+              notices and events held in society and can see information about
+              members in society. Members can also post complaints regarding any
+              issue in society.</a></li>
+            </ul>
+        </div>
+    
+        <div class="col">
+          <h5>More</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0"  style="color: #ffffff;">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 "  style="color: #ffffff;">Login</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 "  style="color: #ffffff;">Rules and Regulations</a></li>
+          </ul>
+        </div>
+    
+        <div class="col">
+          <h5>Contact Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 "  style="color: #ffffff;">Thanekar Parkland,Badlapur(E)</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 "  style="color: #ffffff;">+91 8779635278</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 "  style="color: #ffffff;">Kapil_Akhila@gmail.com</a></li>
+             </ul>
+        </div>
+      </footer>
+    </div>
+
+  
+    <hr />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var Loginform = document.getElementById("Loginform");
+      var Regform = document.getElementById("Regform");
+      var indicator = document.getElementById("indicator");
+
+      function register() {
+        Regform.style.transform = "translateX(0px)";
+        Loginform.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(80px)";
+      }
+      function login() {
+        Regform.style.transform = "translateX(300px)";
+        Loginform.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+  </body>
+</html>
